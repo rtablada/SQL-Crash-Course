@@ -6,4 +6,4 @@
 
 * Create a database by running sqlite crash.db
 * at the sqlite prompt enter  
-*```.read contacts.sql ```
+```.read contacts.sql ```
