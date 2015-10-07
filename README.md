@@ -11,8 +11,14 @@
 
 Helpful sqlite commands
 ```
-.headers on
-.mode columns
-.exit
+.headers on -- results will appear with headers
+.mode columns -- outputs results as columns
+.exit or .quit  --exit sqlite
+
+.tables -- list all tables in database
+.output FILENAME     Send output to FILENAME or stdout
+.schema TABLE        Show the CREATE statements
+                         If TABLE specified, only show tables matching
+                         LIKE pattern TABLE.
 ```
 
