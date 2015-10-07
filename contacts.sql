@@ -1,13 +1,13 @@
-CREATE TABLE Address(Id INTEGER NOT NULL,	StreetNumber VARCHAR(55) NOT NULL,	Street VARCHAR(55) NOT NULL,	City VARCHAR(55) NOT NULL,	Zip VARCHAR(55) NOT NULL,	County VARCHAR(55) NOT NULL, Country VARCHAR(55) NOT NULL , CONSTRAINT PK_Address PRIMARY KEY (Id) );
+CREATE TABLE Address(Id INTEGER NOT NULL,	StreetNumber VARCHAR(55) NOT NULL,	Street VARCHAR(55) NOT NULL, State VARCHAR(25),	City VARCHAR(55) NOT NULL,	Zip VARCHAR(55) NOT NULL,	County VARCHAR(55) NOT NULL, Country VARCHAR(55) NOT NULL , CONSTRAINT PK_Address PRIMARY KEY (Id) );
 CREATE TABLE EmailAddress(Id INTEGER NOT NULL,	PersonId INTEGER,	EmailAddress VARCHAR(55) NOT NULL, CONSTRAINT PK_email_address PRIMARY KEY (Id ));
 CREATE TABLE Person(Id INTEGER  NOT NULL,  FirstName VARCHAR(55) NOT NULL,	 LastName VARCHAR(55) NULL,	 ContactedNumber INTEGER NOT NULL, LastContactedDate DATETIME NOT NULL,DateAdded DATETIME NOT NULL,  CONSTRAINT PK_person PRIMARY KEY (Id));
 CREATE TABLE PersonAddress(Id INTEGER NOT NULL,	PersonId INTEGER NOT NULL,	AddressId INTEGER NOT NULL, CONSTRAINT PK_address PRIMARY KEY (Id));
 CREATE TABLE PhoneNumber(Id INTEGER NOT NULL,	PersonId INTEGER NOT  NULL,	PhoneNumber VARCHAR(55) NOT NULL, CONSTRAINT PK_phone_number PRIMARY KEY (Id));
 
-INSERT INTO address (Id, StreetNumber, Street,  city, Zip, State, country) VALUES (4, '500', 'Main ST', 'Little Rock', '72201', 'Arkansas', 'US');
-INSERT INTO address (Id, StreetNumber, Street,  city, Zip, State, country) VALUES (1, '555', 'Glenn Hills', 'Little Rock', '72201', 'Arkansas', 'US');
-INSERT INTO address (Id, StreetNumber, Street,  city, Zip, State, country) VALUES (2, '555', 'Cantrell', 'Toronto', '72120', 'Ontario', 'Canada');
-INSERT INTO address (Id, StreetNumber, Street,  city, Zip, State, country) VALUES (3, '555', 'Scott', 'Boonies', 'Sherwood', '72120', 'Arkansas', 'US');
+INSERT INTO address (Id, StreetNumber, Street,  city, Zip, State, County, country) VALUES (4, '500', 'Main ST', 'Little Rock', '72201', 'Arkansas', 'Pulaski','US');
+INSERT INTO address (Id, StreetNumber, Street,  city, Zip, State, County, country) VALUES (1, '555', 'Glenn Hills', 'Little Rock', '72201', 'Arkansas', 'Saline', 'US');
+INSERT INTO address (Id, StreetNumber, Street,  city, Zip, State, County, country) VALUES (2, '555', 'Cantrell', 'Toronto', '72120', 'Ontario', 'Not Sure', 'Canada');
+INSERT INTO address (Id, StreetNumber, Street,  city, Zip, State, County, country) VALUES (3, '555', 'Scott', 'Sherwood', '72120', 'Arkansas', 'Pulaski','US');
 
 INSERT INTO EmailAddress (Id, PersonId, EmailAddress) VALUES (1, 1, 'daniel@theIronYard.com');
 INSERT INTO EmailAddress (Id, PersonId, EmailAddress) VALUES (2, 1, 'daniel@email.com');
